@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_margin="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textView_login"
+            android:fontFamily="@font/kanit_medium"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Text 1"
+            android:textColor="@android:color/black"
+            android:textSize="16.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_date"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/textView_login"
+            android:text="Text 2"
+            android:textColor="@android:color/black"
+            android:textSize="16.5sp" />
+
+        <TextView
+            android:id="@+id/textView_content"
+            android:fontFamily="@font/ptsansnarrow_regular"
+            android:layout_width="403dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_login"
+            android:text="Text 3"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pull_to_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    tools:context=".ui.shoutbox.ShoutboxFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCC4C4">
+
+        <Button
+            android:id="@+id/buttonSendData"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/my_style"
+            android:foreground="@android:drawable/ic_menu_send"
+            android:foregroundGravity="center_vertical|center"
+            android:foregroundTint="#000000"
+            android:stateListAnimator="@anim/fragment_open_enter" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="663dp"
+            android:layout_above="@+id/editTextContent"
+            android:layout_marginBottom="28dp"
+            android:background="#CCC4C4"
+            android:clipToPadding="false"
+            android:padding="4dp"
+            tools:listitem="@layout/recycler_item" />
+
+        <EditText
+            android:id="@+id/editTextContent"
+            android:layout_width="341dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/buttonSendData"
+            android:background="@drawable/my_style"
+            android:hint="Content"
+            android:inputType="text" />
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

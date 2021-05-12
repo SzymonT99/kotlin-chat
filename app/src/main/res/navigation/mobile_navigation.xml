@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_settings">
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.shoutbox.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_nav_settings_to_nav_shoutbox"
+            app:destination="@id/nav_shoutbox" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_shoutbox"
+        android:name="com.example.shoutbox.ui.shoutbox.ShoutboxFragment"
+        android:label="@string/menu_shoutbox"
+        tools:layout="@layout/fragment_shoutbox" >
+        <argument android:name="login"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_shoutbox_to_editingFragment"
+            app:destination="@id/nav_editing" />
+        <argument
+            android:name="flag"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_editing"
+        android:name="com.example.shoutbox.EditingFragment"
+        android:label="@string/menu_shoutbox"
+        tools:layout="@layout/fragment_editing">
+        <argument android:name="login"
+            app:argType="string" />
+        <argument android:name="date"
+            app:argType="string" />
+        <argument android:name="content"
+            app:argType="string" />
+        <argument android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="loginAuthorisation"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_editing_to_nav_shoutbox"
+            app:destination="@id/nav_shoutbox" />
+    </fragment>
+
+
+</navigation>
